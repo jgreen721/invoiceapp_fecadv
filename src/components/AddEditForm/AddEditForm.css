@@ -82,4 +82,8 @@
   .form-desktop-row {
     flex-direction: column;
   }
+
+  .custom-selects-form-row {
+    flex-direction: column;
+  }
 }

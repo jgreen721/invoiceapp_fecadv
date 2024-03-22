@@ -8,6 +8,7 @@ import { Status } from '../../..'
 
 const InvoiceItem = ({invoice}) => {
   const {viewInvoice} = useInvoiceContext();
+  console.log("invoiceItem rendered!")
   return (
     <li className="invoice-item">
       <div className="invoice-item-content-row desktop">
@@ -41,4 +42,4 @@ const InvoiceItem = ({invoice}) => {
   )
 }
 
-export default InvoiceItem
+export default React.memo(InvoiceItem);

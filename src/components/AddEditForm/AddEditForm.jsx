@@ -214,7 +214,7 @@ useEffect(()=>{
             </div>
             <FormDiv clearArtifacts={clearArtifacts} toggleOffFieldError={toggleOffFieldError} label="Country" placeholder="Country" name="clients_country" bill="to" hasError={fieldsError.clients_country}/>
           </div> 
-          <div className="form-row">
+          <div className="form-row custom-selects-form-row">
             <CalenderForm clearArtifacts={clearArtifacts} />
             <SelectForm clearArtifacts={clearArtifacts}/>
           </div>
