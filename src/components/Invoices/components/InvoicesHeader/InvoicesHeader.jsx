@@ -10,7 +10,7 @@ const InvoicesHeader = ({invoices}) => {
   const {filterBy,toggleForm} = useUIContext();
 
   return (
-    <div className="invoice-header">
+    <div className="invoices-header">
       
       <div className="column">
         <h1 className="my-1">Invoices</h1>

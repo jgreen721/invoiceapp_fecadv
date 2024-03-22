@@ -1,8 +1,9 @@
-.invoice-header {
+.invoices-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 6rem;
+  padding: 3rem;
 }
 
 .filter-add-row {
@@ -44,4 +45,13 @@
 
 .rotate-down {
   transform: rotate(0deg);
+}
+
+@media screen and (max-width: 650px) {
+  .invoices-header {
+    margin-bottom: 2rem;
+  }
+  .filter-add-row {
+    gap: 2rem;
+  }
 }

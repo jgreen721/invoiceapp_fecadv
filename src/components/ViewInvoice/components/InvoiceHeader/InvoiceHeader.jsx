@@ -6,7 +6,7 @@ import "./InvoiceHeader.css"
 const InvoiceHeader = ({currInvoice,toggleDeleteModal}) => {
   console.log(currInvoice)
   return (
-    <header className="invoice-header">
+    <header className="invoice-header secondary-bg">
         <div className="invoice-header-row">
             <div className="header-row">
                 <h5 className="mid-thin muted">Status</h5>

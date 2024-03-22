@@ -10,7 +10,7 @@ const InvoiceItem = ({invoice}) => {
   const {viewInvoice} = useInvoiceContext();
   return (
     <li className="invoice-item">
-      <div className="invoice-item-content-row">
+      <div className="invoice-item-content-row desktop">
         <div className="invoice-number-div">
           <h3><span className="muted">#</span>{invoice.id}</h3>
         </div>
@@ -21,6 +21,21 @@ const InvoiceItem = ({invoice}) => {
         <button onClick={()=>viewInvoice(invoice)} className="view-invoice-btn">
           <img src={arrowRight} alt="" />
         </button>
+      </div>
+      <div className="mobile-item-content-row">
+        <div className="mobile-column">
+          <div className="mobile-id-div">
+            <h5 className="bold">#{invoice.id}</h5>
+          </div>
+          <div>
+            <h5 className="muted">{invoice.createdAt}</h5>
+            <h5 className="bold">{String.fromCharCode(163)}{formatAmount(invoice.total)}</h5>
+          </div>
+        </div>
+        <div className="mobile-column">
+          <h5 className="muted">{invoice.clientName}</h5>
+          <Status invoice={invoice}/>
+        </div>
       </div>
     </li>
   )
