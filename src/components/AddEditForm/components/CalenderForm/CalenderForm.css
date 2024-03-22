@@ -1,0 +1,63 @@
+.calender-form-container {
+  position: relative;
+}
+
+.calender-select {
+  position: absolute;
+  width: 100%;
+  margin-top: 1rem;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background: var(--secondaryBg);
+  position: absolute;
+  width: 100%;
+  transition: 0.5s ease;
+  transform-origin: top;
+  z-index: 50;
+  box-shadow: 5px 5px 10px var(--mutedpurple), 5px 5px 15px var(--mutedpurple),
+    5px 1px 25px var(--lightgray);
+}
+
+.calender-icon {
+  position: absolute;
+  right: 2rem;
+}
+
+.calender-form-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--mainColor);
+  padding-bottom: 1rem;
+}
+
+.calender-days {
+  padding-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1rem;
+  z-index: 50;
+  background: var(--secondaryBg);
+  position: relative;
+  transition: 0.5s ease;
+}
+
+.day-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* padding: 1rem; */
+}
+
+.muted-day-item {
+  opacity: 25%;
+}
+
+.calender-btn {
+  transition: 0.2s ease;
+}
+
+.calender-btn:hover {
+  transform: scale(1.3);
+}

@@ -1,0 +1,30 @@
+.invoice-header {
+  background: var(--secondaryBg);
+  padding: 3rem;
+  border-radius: 0.5rem;
+  margin: 2.5rem 0rem;
+}
+
+.invoice-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.header-row {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+@media screen and (max-width: 650px) {
+  .desktop-header {
+    display: none;
+  }
+
+  .header-row {
+    justify-content: space-between;
+    width: 100%;
+  }
+}

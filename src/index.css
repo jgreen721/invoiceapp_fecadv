@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
+
+html {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --mainpurple: #7c4dfa;
+  --mutedpurple: #9277ff;
+  --darkblue: #1e2139;
+  --muteddarkblue: #252945;
+  --lightgray: #dfe3fa;
+  --gray: #888eb0;
+  --slatebluegray: #7e88c3;
+  --offblack: #0c0e16;
+  --red: #ec5757;
+  --mutedred: #9277ff;
+  --offwhite: #f8f8f8;
+  --white: white;
+  --mutedblack: #141625;
+  --green: #33d69f;
+  --yellow: #ff8f00;
+  --mainFont: "League Spartan", sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 3.6rem;
+}
+
+h2 {
+  font-size: 2.4rem;
+}
+
+h5 {
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+.form-label {
+  font-size: 1.5rem;
+}
+
+.spaced-caption {
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+}
+
+.reg-caption {
+  font-size: 1.3rem;
+}
+
+.mid-thin {
+  font-weight: 400;
+}
+
+.muted {
+  opacity: 65%;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.extra-bold {
+  font-weight: 800;
+}
+
+.my-1 {
+  margin: 0.5rem 0;
+}
+
+.purple-text {
+  color: var(--mainpurple);
+}
+
+.primary-text {
+  color: var(--mainColor);
+}
+
+.hide-dropdown {
+  transform: scaleY(0);
+}
+
+.transparent-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 1rem 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 50%;
+}
+
+.secondary-bg {
+  background: var(--secondaryBg);
+}
+
+@media screen and (max-width: 650px) {
+  .desktop {
+    display: none;
+  }
+}

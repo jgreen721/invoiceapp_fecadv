@@ -1,0 +1,85 @@
+.add-edit-form-parent {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  /* border: 2px solid red; */
+  z-index: 100;
+  transform-origin: left;
+  transition: 0.5s ease;
+}
+
+.hide-form-parent {
+  left: -100vw;
+  /* opacity: 0;
+  pointer-events: none; */
+}
+
+.invoice-form {
+  position: relative;
+  /* border: 2px solid red; */
+  width: clamp(40%, 550px, 100%);
+  /* width: 100%; */
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  height: 100%;
+}
+
+.form-content {
+  position: absolute;
+  inset: 0;
+  background: var(--formBg);
+  /* border: 4px solid yellow; */
+  z-index: 50;
+  overflow: auto;
+  padding: 6rem 5rem;
+  padding-bottom: 10rem;
+  border-top-right-radius: 2rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.form-desktop-row {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.form-section {
+  margin: 2rem 0;
+}
+
+.form-section-label {
+  margin-bottom: 2rem;
+}
+
+/* .errors-row {
+  background: red;
+  position: absolute;
+  z-index: 100;
+} */
+
+.error-text {
+  color: var(--red);
+}
+
+/*Custom Selects Shared CSS */
+
+.select-item {
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.select-item:hover {
+  color: var(--mainpurple);
+}
+
+@media screen and (max-width: 650px) {
+  .form-desktop-row {
+    flex-direction: column;
+  }
+}

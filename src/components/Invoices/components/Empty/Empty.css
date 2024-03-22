@@ -1,0 +1,13 @@
+.empty-invoices-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  /* border: 3px solid red; */
+  margin: 12.5rem 18.5rem;
+  text-align: center;
+}
+
+.empty-caption-div {
+  margin: 3rem;
+}

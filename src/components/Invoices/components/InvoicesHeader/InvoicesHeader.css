@@ -1,0 +1,47 @@
+.invoice-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6rem;
+}
+
+.filter-add-row {
+  display: flex;
+  align-items: center;
+  gap: 6rem;
+}
+
+.btn-icon-div {
+  background: var(--offwhite);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.filter-container {
+  position: relative;
+}
+
+.filter-search-row {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2) inset;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.arrow-icon {
+  transition: 0.2s ease;
+}
+
+.rotate-up {
+  transform: rotate(180deg);
+}
+
+.rotate-down {
+  transform: rotate(0deg);
+}

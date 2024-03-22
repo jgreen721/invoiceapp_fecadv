@@ -1,0 +1,12 @@
+export const arrowDown = "./assets/icon-arrow-down.svg";
+export const arrowLeft = "./assets/icon-arrow-left.svg";
+export const arrowRight = "./assets/icon-arrow-right.svg";
+export const calenderIcon = "./assets/icon-calendar.svg";
+export const checkIcon = "./assets/icon-check.svg";
+export const deleteIcon = "./assets/icon-delete.svg";
+export const plusIcon = "./assets/icon-plus.svg";
+export const moonIcon = "./assets/icon-moon.svg";
+export const sunIcon = "./assets/icon-sun.svg";
+export const imgAvatar = "./assets/image-avatar.jpg";
+export const logo = "./assets/logo.svg";
+export const emptyImg = "./assets/illustration-empty.svg";

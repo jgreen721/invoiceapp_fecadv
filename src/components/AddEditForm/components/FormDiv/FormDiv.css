@@ -1,0 +1,34 @@
+.form-div {
+  margin: 1rem 0;
+  position: relative;
+}
+
+.form-label {
+  color: var(--formLabelColor);
+  display: block;
+  padding: 0.5rem 0rem;
+}
+
+.form-control {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  background: var(--secondaryBg) !important;
+  border: 2.5px solid rgba(124, 77, 250, 0.2);
+  border: 2px solid var(--formBorderColor);
+  color: var(--mainColor);
+  outline: none;
+}
+
+.red-error {
+  color: red;
+  margin: 0.5rem 0;
+  font-weight: 300;
+  font-size: 1rem;
+  position: absolute;
+  bottom: -2.5rem;
+}
+
+.error-border {
+  border: 2px solid red;
+}

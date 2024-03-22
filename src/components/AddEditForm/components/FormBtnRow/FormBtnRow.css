@@ -1,0 +1,34 @@
+.form-btns-row {
+  /* margin: 1.5rem 0; */
+  position: absolute;
+  z-index: 75;
+  background: var(--formBg);
+  width: 100%;
+  padding: 2rem 5rem;
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.form-btns-row,
+.btns-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-btns-row {
+  gap: 2rem;
+}
+
+.btns-row {
+  gap: 3rem;
+}
+
+@media screen and (max-width: 650px) {
+  .form-btns-row {
+    padding: 2rem;
+  }
+  .btns-row,
+  .form-btns-row {
+    gap: 1rem;
+  }
+}

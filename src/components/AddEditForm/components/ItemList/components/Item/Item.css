@@ -1,0 +1,40 @@
+.item {
+  padding: 1rem 0;
+  position: relative;
+}
+
+.item-input {
+  border: none;
+  outline: none;
+  border: 2px solid green;
+  width: max-content;
+  padding: 1.5rem;
+}
+
+.item-num-input::-webkit-outer-spin-button,
+.item-num-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.total-table-column {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  /* border: 2px solid red; */
+  height: 100%;
+  padding: 1rem;
+}
+
+.item-input {
+  border: 2px solid var(--formBorderColor);
+  background: var(--secondaryBg);
+  padding: 1rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  color: var(--mainColor);
+}
+
+.error-border {
+  border: 2px solid red;
+}

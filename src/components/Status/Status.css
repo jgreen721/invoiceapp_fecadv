@@ -1,0 +1,70 @@
+.status-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  position: relative;
+  border-radius: 0.5rem;
+  width: 100px;
+  gap: 1.5rem;
+  overflow: hidden;
+}
+
+.status-div * {
+  position: relative;
+  z-index: 10;
+}
+
+.green-status-div::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--green);
+  opacity: 15%;
+}
+
+.yellow-status-div::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--yellow);
+  opacity: 15%;
+}
+
+.gray-status-div::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--gray);
+  opacity: 15%;
+}
+
+.dot {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+}
+
+.green-dot {
+  background: var(--green);
+}
+
+.yellow-dot {
+  background: var(--yellow);
+}
+
+.gray-dot {
+  background: var(--gray);
+}
+
+.green-text {
+  color: var(--green);
+}
+
+.yellow-text {
+  color: var(--yellow);
+}
+
+.gray-text {
+  color: var(--gray);
+}
