@@ -1,10 +1,12 @@
 import React from 'react'
 import {Btn} from "../../../"
+import { useUIContext } from '../../../../context'
 import { useInvoiceContext } from '../../../../context/InvoiceContext'
 import "./HeaderBtnRow.css"
 
 const HeaderBtnRow = ({toggleDeleteModal}) => {
-  const {toggleForm,currInvoice,updateStatusToPaid} = useInvoiceContext();
+  const {currInvoice,updateStatusToPaid} = useInvoiceContext();
+  const {toggleForm} = useUIContext()
   return (
     <div className="header-btn-row">
         <Btn handleEvent={toggleForm} className="gray-btn">

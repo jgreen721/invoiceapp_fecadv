@@ -11,7 +11,7 @@ import { useLocalStorage } from '../../hooks/useLocalStorage'
 const AddEditForm = () => {
   const {showForm,toggleForm} = useUIContext();
   const {payload:payloadItems,loading} = useLocalStorage("items",[],null);
-  const {handleSaveInvoice, adjustInvoiceItems,clearInvoiceItems} = useInvoiceContext();
+  const {handleSaveInvoice, adjustInvoiceItems,clearInvoiceItems,currInvoice} = useInvoiceContext();
   const [clearArtifacts, setClearArtifacts] = useState(false);
   const formRef = useRef();
   // mainform errors
@@ -97,7 +97,7 @@ useEffect(()=>{
     }
     else{
   // toggleError("clear")
-   handleSaveInvoice(newInvoiceItem)
+   handleSaveInvoice(newInvoiceItem,"pending")
   toggleForm();
     }
   }
@@ -134,6 +134,7 @@ useEffect(()=>{
        return;   //we dont want to close the form necessarily
      }
     toggleForm();
+    handleSaveInvoice(savedDraft,"draft")
   }
 
 
@@ -184,7 +185,11 @@ useEffect(()=>{
 
 
   return (
-    <div className={showForm ? "add-edit-form-parent" : "add-edit-form-parent hide-form-parent"}>
+    <div onClick={(e)=>{
+      if(e.target.classList.contains("add-edit-form-parent")){
+      toggleForm()
+    }}}
+      className={showForm ? "add-edit-form-parent" : "add-edit-form-parent hide-form-parent"}>
       <div className={showForm ? `invoice-form` : "invoice-form hide-form"}>
         <form ref={formRef} className="invoice-form">
           <div className="form-content">

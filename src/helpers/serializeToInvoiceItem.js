@@ -1,4 +1,4 @@
-export const serializeToInvoiceItem = (item) => {
+export const serializeToInvoiceItem = (item, invoiceStatus) => {
   console.log("serializeToInvoiceItem", item);
   let formattedInvoiceItem = {};
 
@@ -31,7 +31,7 @@ export const serializeToInvoiceItem = (item) => {
     city: item.billFrom.city,
     postCode: item.billFrom.postcode,
   };
-  formattedInvoiceItem.status = "pending";
+  formattedInvoiceItem.status = invoiceStatus;
   formattedInvoiceItem.total = item.total;
 
   formattedInvoiceItem.paymentDue = formatPaymentDue(

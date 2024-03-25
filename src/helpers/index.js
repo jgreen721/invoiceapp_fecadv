@@ -5,3 +5,4 @@ export { validateItems } from "./validateItems";
 export { validateLSDraft } from "./validateLSDraft";
 export { parseLocalStorage } from "./parseLocalStorage";
 export { serializeToInvoiceItem } from "./serializeToInvoiceItem";
+export { serializeToFormData } from "./serializeToFormData";

@@ -1,11 +1,14 @@
 import React, {useState, useEffect} from 'react'
+import { useInvoiceContext } from '../../../../context';
 import { useLocalStorage } from '../../../../hooks/useLocalStorage';
+import {serializeToFormData} from "../../../../helpers"
 import "./FormDiv.css"
 
 const FormDiv = ({label,placeholder,name,bill,toggleOffFieldError,hasError,clearArtifacts}) => {
 
   let {payload:formPayload} = useLocalStorage(name,"",bill);
   const [inputVal,setInputVal] = useState("");
+  const {currInvoice} = useInvoiceContext();
 
   useEffect(()=>{
       if(formPayload){
@@ -15,6 +18,15 @@ const FormDiv = ({label,placeholder,name,bill,toggleOffFieldError,hasError,clear
         setInputVal("");
       }
   },[formPayload,clearArtifacts])
+
+
+  useEffect(()=>{
+    if(currInvoice){
+      setInputVal("")
+      let invoice = serializeToFormData(currInvoice)
+      setInputVal(invoice[name])
+    }
+  },[currInvoice]);
 
 
 

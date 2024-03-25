@@ -38,12 +38,12 @@ else{
 },[localStorageInvoiceItems])
 
 
-const handleSaveInvoice=(newInvoice)=>{
+const handleSaveInvoice=(newInvoice,invoiceStatus)=>{
   // console.log("handle save invoice fired!",newInvoice)
   newInvoice.total = total
   // console.log("NewINVNOICE",newInvoice)
 
-    let formattedInvoiceItem = serializeToInvoiceItem(newInvoice);
+    let formattedInvoiceItem = serializeToInvoiceItem(newInvoice,invoiceStatus);
     handleAddNewItem(formattedInvoiceItem);
 }
 
