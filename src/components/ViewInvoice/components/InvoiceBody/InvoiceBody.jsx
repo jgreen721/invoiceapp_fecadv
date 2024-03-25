@@ -2,7 +2,7 @@ import React from 'react'
 import "./InvoiceBody.css"
 
 const InvoiceBody = ({currInvoice}) => {
-  console.log("currInvoice",currInvoice)
+  // console.log("currInvoice",currInvoice)
   return (
     <div className="invoice-body-container">
       <div className="top-invoice-row">

@@ -3,7 +3,7 @@ import { useInvoiceContext } from '../../../../context';
 import "./DeleteModal.css";
 
 const DeleteModal = ({showDeleteModal,toggleModal}) => {
-  const {currInvoice} = useInvoiceContext();
+  const {currInvoice,handleConfirmDelete} = useInvoiceContext();
   return (
     <div className={showDeleteModal ? "delete-modal-parent" : "delete-modal-parent hide-delete-modal"}>
     <div className="delete-modal">
@@ -11,7 +11,10 @@ const DeleteModal = ({showDeleteModal,toggleModal}) => {
       <h5>Are you sure you want delete invoice #{currInvoice.id}? This action cannot be undone. </h5>
       <div className="delete-btn-row">
         <button onClick={toggleModal} className="btn gray-btn">Cancel</button>
-        <button className="btn red-btn">Delete</button>
+        <button onClick={()=>{
+          handleConfirmDelete()
+           toggleModal()
+        }} className="btn red-btn">Delete</button>
       </div>
     </div>
     </div>

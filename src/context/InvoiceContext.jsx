@@ -16,7 +16,6 @@ export const InvoiceProvider = ({ children }) => {
 
 
 
-
 const {filtered:invoices,loading,error,handleAddNewItem,handleDeleteInvoice} = useApi(filterBy);
 const {payload:localStorageInvoiceItems} = useLocalStorage("items")
 
@@ -102,8 +101,10 @@ const handleSaveInvoice=(newInvoice)=>{
     adjustInvoiceItemsTotal([])
   }
 
-  const deleteInvoiceItem=(id)=>{
-    handleDeleteInvoice(id);
+  const handleConfirmDelete=()=>{
+    console.log("handleConfirmDelete fired!")
+    handleDeleteInvoice(currInvoice.id);
+    setCurrInvoice(null)
   }
 
 
@@ -127,7 +128,7 @@ const handleSaveInvoice=(newInvoice)=>{
     adjustInvoiceItems,
     adjustInvoiceItemsTotal,
     clearInvoiceItems,
-    deleteInvoiceItem,
+    handleConfirmDelete,
     invoiceItems,
     total,
     loading,

@@ -4,7 +4,7 @@ import {HeaderBtnRow} from ".."
 import "./InvoiceHeader.css"
 
 const InvoiceHeader = ({currInvoice,toggleDeleteModal}) => {
-  console.log(currInvoice)
+  // console.log(currInvoice)
   return (
     <header className="invoice-header secondary-bg">
         <div className="invoice-header-row">

@@ -5,6 +5,7 @@ export const useApi = (filterBy) => {
   const [filtered,setFiltered] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [hydrate,setHydrate] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -20,7 +21,6 @@ export const useApi = (filterBy) => {
         console.log("DONE",result);
         setData(result);
         setFiltered(result);
-        updateData(result);
       } catch (error) {
         setError(error);
       } finally {
@@ -44,18 +44,37 @@ export const useApi = (filterBy) => {
   },[filterBy])
 
 
+  useEffect(()=>{
+    console.log("hydrated!!")
+
+    if(filterBy == ""){
+      setFiltered(data)
+      return;
+    }
+    let temp = data;
+    temp = temp.filter(t=>t.status == filterBy);
+    setFiltered(temp)
+ 
+  },[hydrate])
+
+
   const handleAddNewItem = (newItem)=>{
     let tempData = data;
     tempData.push(newItem);
     console.log("useAPI",tempData,newItem)
     setData(tempData);
+    setHydrate(hydrate=>hydrate=!hydrate)
     // setFiltered(tempData)
   }
 
   const handleDeleteInvoice=(id)=>{
     let tempData = data;
-    tempData = tempData.filter(item=>item.id == id);
+    // console.log("DataLength",tempData.length)
+    tempData = tempData.filter(item=>item.id != id);
     setData(tempData);
+    // console.log("DataLength",tempData.length)
+    // console.log("handle Delete fired!")
+    setHydrate(hydrate=>hydrate=!hydrate)
 
   }
 
